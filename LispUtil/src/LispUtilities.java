@@ -16,7 +16,7 @@ public final class LispUtilities
      * @param s
      * @return true or false
      */
-    public boolean isLisp(String s) {
+    public static boolean isLisp(String s) {
         HashMap <Character, Integer> map = new HashMap <Character, Integer>();
         
         //remove comments
