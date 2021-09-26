@@ -31,7 +31,7 @@ public final class LispUtilities
         
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(' || s.charAt(i) == ')') {
-                map.put(s.charAt(i), map.getOrDefault(map.get(s.charAt(i)), 0) + 1);
+                map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0) + 1);
             }
         }
         
