@@ -19,6 +19,10 @@ public final class LispUtilities
     public static boolean hasCorrectParenthesis(String s) {
         HashMap <Character, Integer> map = new HashMap <Character, Integer>();
         
+        if(s == null) {
+            return false;
+        }
+        
         //remove comments
         s = s.replaceAll(";.*\\R*", "");
         
@@ -27,6 +31,8 @@ public final class LispUtilities
         
         //remove special characters except parenthesis
         s = s.replaceAll("[+.^$&:,'?!-]", "");
+        
+
         
         if(s.length() == 0) {
             return true;

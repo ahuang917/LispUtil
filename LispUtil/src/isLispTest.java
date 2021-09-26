@@ -14,7 +14,13 @@ class isLispTest
 {
 
 
-
+    @Test
+    void testNullString() 
+    {
+        String s = null;
+        assertFalse(LispUtilities.hasCorrectParenthesis(s));
+    }
+    
     @Test
     void testHelloWorld()
     {
