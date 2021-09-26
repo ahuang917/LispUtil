@@ -25,6 +25,9 @@ public final class LispUtilities
         //remove alphanumeric characters
         s = s.replaceAll("\\w", "");
         
+        //remove special characters except parenthesis
+        s = s.replaceAll("[+.^$&:,'?!-]", "");
+        
         if(s.length() == 0) {
             return true;
         }

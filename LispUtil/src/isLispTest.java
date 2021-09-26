@@ -79,6 +79,21 @@ class isLispTest
         assertTrue(LispUtilities.hasCorrectParenthesis(s));
     }
     
+    @Test
+    void testFactorialLispCode() {
+        String s = "(defun factorial (n &optional (acc 1))\r\n"
+            + "    (if (zerop n) acc\r\n"
+            + "        (factorial (1- n) (* acc n))))";
+        assertTrue(LispUtilities.hasCorrectParenthesis(s));
+    }
+    
+    @Test
+    void testBadFactorialLispCode() {
+        String s = "(defun factorial (n &optional (acc 1))\r\n"
+            + "    (if (zerop n) acc\r\n"
+            + "        (factorial (1- n) (* acc n)";
+        assertFalse(LispUtilities.hasCorrectParenthesis(s));
+    }
     
     
 }
