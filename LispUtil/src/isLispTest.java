@@ -56,6 +56,13 @@ class isLispTest
     
     @Test
     void testLispWithCommentParenth() {
+        String s = "(print \"Hello, world!\");Random ( comment";
+        assertTrue(LispUtilities.hasCorrectParenthesis(s));
+    }
+    
+    
+    @Test
+    void testBadLispWithCommentParenth() {
         String s = "(print \"Hello, world!\";Random ( comment";
         assertFalse(LispUtilities.hasCorrectParenthesis(s));
     }
